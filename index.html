@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luis Corredor | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="home-page">
+    <div class="page-wrapper">
+      <!-- Navigation -->
+      <nav class="site-nav">
+        <div class="logo">LUIS CORREDOR</div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#" class="cta">Start Project →</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hero -->
+      <header class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+          <h1>Luis Corredor</h1>
+          <h2>Creative Designer & UX Specialist</h2>
+          <h3>
+            I am a designer who believes in the power of simplicity and
+            functionality. My work is driven by a passion for creating
+            meaningful experiences that resonate with users.
+          </h3>
+          <p><a href="portfolio.html" class="btn">View My Work</a></p>
+        </div>
+      </header>
+
+      <!-- Projects -->
+      <section id="projects" class="projects">
+        <div class="projects-header">
+          <hr class="line" />
+          <h2>Some of my latest work</h2>
+          <hr class="line" />
+        </div>
+
+        <div class="project-cards">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <img
+              src="images/gs_home.jpg"
+              alt="Gasoline & Leather"
+              class="project-image"
+            />
+            <h3>Gasoline & Leather</h3>
+            <a
+              href="#"
+              class="btn"
+              onclick="document.getElementById('project1-overlay').style.display='flex'"
+              >View Project</a
+            >
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <img
+              src="images/neimar_labtop.png"
+              alt="Project 2"
+              class="project-image"
+            />
+            <h3>Project Title 2</h3>
+            <a
+              href="#"
+              class="btn"
+              onclick="document.getElementById('project2').style.display='flex'"
+              >View Project</a
+            >
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <img
+              src="images/lilly_homepage_sq.jpg"
+              alt="Lilly Law Website"
+              class="project-image"
+            />
+            <h3>Lilly Law Website</h3>
+            <a
+              href="#"
+              class="btn"
+              onclick="document.getElementById('project3').style.display='flex'"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-left">
+            <p>© 2025 Luis Corredor. All rights reserved. | Gaithersburg, MD</p>
+          </div>
+          <div class="social-icons">
+            <a
+              href="https://twitter.com/yourprofile"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <img src="images/x-icon.svg" alt="Twitter" />
+            </a>
+            <a
+              href="https://instagram.com/yourprofile"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <img src="images/instagram-icon.svg" alt="Instagram" />
+            </a>
+            <a
+              href="https://facebook.com/yourprofile"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <img src="images/facebook-icon.svg" alt="Facebook" />
+            </a>
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <img src="images/linkedin-icon.svg" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Floating Start Project Form -->
+    <div id="form-overlay" class="form-overlay" style="display: none">
+      <div class="form-container">
+        <a
+          href="#"
+          class="close-overlay"
+          onclick="document.getElementById('form-overlay').style.display='none'"
+          >×</a
+        >
+        <h2>Start a Project</h2>
+        <form action="https://formspree.io/f/movdjnzd" method="POST">
+          <input type="hidden" name="_next" value="thank-you.html" />
+          <input type="text" name="_gotcha" style="display: none" />
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+          <label for="project-type">What do you need help with?</label>
+          <select id="project-type" name="project-type">
+            <option value="branding">Branding</option>
+            <option value="web-design">Web Design</option>
+            <option value="ux">UX Strategy</option>
+            <option value="illustration">Illustration</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Floating Project Overlay: Gasoline & Leather -->
+    <div
+      id="project1-overlay"
+      class="project-overlay scroll"
+      style="display: none"
+    >
+      <div
+        class="form-container project-overlay-container"
+        style="
+          max-height: 90vh;
+          height: 90vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        "
+      >
+        <a
+          href="#"
+          class="close-overlay scroll-overlay-close"
+          <a href="#" class="close-overlay scroll-overlay-close" onclick="document.getElementById('project1-overlay').style.display='none'">×</a>          >×</a
+        >
+        <div
+          class="image-scroll-area"
+          style="overflow-y: auto; max-height: 70vh"
+        >
+          <img
+            src="images/gs200px.jpg"
+            alt="Gasoline & Leather Web Concept Full Preview"
+            style="max-width: 100%; height: auto"
+          />
+        </div>
+        <div class="fixed-overlay-description">
+          <div class="nike-meta fixed-meta">
+            <h2>Gasoline & Leather</h2>
+            <p><strong>Client:</strong>Personal Project</p>
+            <p>
+              <strong>Role:</strong> Web Designer, Art Director, Photographer
+            </p>
+            <p><strong>Year:</strong> 2023</p>
+            <p>
+              <em>Gasoline & Leather</em> is a personal branding experiment that
+              merges vintage motor culture with clean, editorial web design.
+              Inspired by the craftsmanship and raw style of café racers and
+              track legends, the site captures the beauty of speed, mechanics,
+              and design history. Every element — from typography to color
+              palette — was chosen to reflect a love of analog machines and
+              authentic storytelling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 Overlay -->
+    <div id="project2" class="project-overlay scroll" style="display: none">
+      <div
+        class="form-container project-overlay-container"
+        style="
+          max-height: 90vh;
+          height: 90vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        "
+      >
+        <a
+          href="#"
+          class="close-overlay scroll-overlay-close"
+          onclick="document.getElementById('project2').style.display='none'"
+          >×</a
+        >
+        <div
+          class="image-scroll-area"
+          style="overflow-y: auto; max-height: 70vh"
+        >
+          <img
+            src="images/neimar_landing.jpg"
+            alt="Nike Neymar LP Project Full Preview"
+            style="max-width: 100%; height: auto"
+          />
+        </div>
+        <div class="fixed-overlay-description">
+          <div class="nike-meta fixed-meta">
+            <h2>Nike Neymar Jr. LP — Limited Edition</h2>
+            <p><strong>Client:</strong> Nike (via Soccer.com)</p>
+            <p><strong>Role:</strong> Web Designer, Art Director, Photographer</p>
+            <p><strong>Year:</strong> 2023</p>
+            <p>
+              This project showcases a one-page campaign site built for the Neymar Jr. limited edition cleats. The
+              page design focused on storytelling through bold imagery and engaging content layout to highlight the
+              collaboration between Neymar and Bruno Big. Photography and visual layout were tailored to maximize
+              emotional and cultural impact for the audience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 Overlay -->
+    <div id="project3" class="project-overlay scroll" style="display: none">
+      <div
+        class="form-container project-overlay-container"
+        style="
+          max-height: 90vh;
+          height: 90vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        "
+      >
+        <a
+          href="#"
+          class="close-overlay scroll-overlay-close"
+          onclick="document.getElementById('project3').style.display='none'"
+          >×</a
+        >
+        <div
+          class="image-scroll-area"
+          style="overflow-y: auto; max-height: 70vh"
+        >
+          <img
+            src="images/lilly_homepage.jpg"
+            alt="Lilly Law Website Full Preview"
+            style="max-width: 100%; height: auto"
+          />
+        </div>
+        <div class="fixed-overlay-description">
+          <div class="nike-meta fixed-meta">
+            <h2>Lilly Law Website</h2>
+            <p><strong>Client:</strong> Lilly Law Firm</p>
+            <p><strong>Role:</strong> UX Designer, Developer, Creative Direction</p>
+            <p><strong>Year:</strong> 2024</p>
+            <p>
+              This site was designed to give Lilly Law a modern, accessible, and professional web presence. I worked closely
+              with the client to develop a clean, responsive layout optimized for legal services, trust building, and clarity
+              of information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/particles-init.js"></script>
+    <script src="js/menu-toggle.js"></script>
+    <script>
+      document.querySelectorAll(".cta").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.getElementById("form-overlay").style.display = "flex";
+        });
+      });
+    </script>
+  </body>
+</html>

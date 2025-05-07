@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Luis Corredor</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="body-contact">
+    <div class="page-wrapper">
+      <nav class="site-nav">
+        <div class="logo"><a href="index.html">LUIS CORREDOR</a></div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="#" class="cta">Start Project →</a></li>
+        </ul>
+      </nav>
+
+      <section class="contact-hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="contact-hero-content">
+          <h1>Let’s Connect</h1>
+          <p>
+            Have a question, idea, or just want to say hello? Reach out anytime.
+          </p>
+          <a class="btn outline-btn" href="mailto:l.corredor@me.com"
+            >Send Email</a
+          >
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-left">
+            <p>© 2025 Luis Corredor. All rights reserved. | Gaithersburg, MD</p>
+          </div>
+          <div class="social-icons">
+            <a
+              href="https://twitter.com/yourprofile"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <img src="images/x-icon.svg" alt="Twitter" />
+            </a>
+            <a
+              href="https://instagram.com/yourprofile"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <img src="images/instagram-icon.svg" alt="Instagram" />
+            </a>
+            <a
+              href="https://facebook.com/yourprofile"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <img src="images/facebook-icon.svg" alt="Facebook" />
+            </a>
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <img src="images/linkedin-icon.svg" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/particles-resume.js"></script>
+    <script src="js/menu-toggle.js"></script>
+
+    <!-- Floating Start Project Form -->
+    <div id="form-overlay" class="form-overlay" style="display: none">
+      <div class="form-container">
+        <a
+          href="#"
+          class="close-overlay"
+          onclick="document.getElementById('form-overlay').style.display='none'"
+          >×</a
+        >
+        <h2>Start a Project</h2>
+        <form action="https://formspree.io/f/movdjnzd" method="POST">
+          <input type="hidden" name="_next" value="thank-you.html" />
+          <input type="text" name="_gotcha" style="display: none" />
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+          <label for="project-type">What do you need help with?</label>
+          <select id="project-type" name="project-type">
+            <option value="branding">Branding</option>
+            <option value="web-design">Web Design</option>
+            <option value="ux">UX Strategy</option>
+            <option value="illustration">Illustration</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".cta").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.getElementById("form-overlay").style.display = "flex";
+        });
+      });
+    </script>
+  </body>
+</html>
